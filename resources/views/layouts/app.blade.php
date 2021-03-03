@@ -18,50 +18,19 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
 </head>
 <body>
     <div id="app">
         
-        <nav class="navbar navbar-expand-md navbar-light bg-primary shadow-sm py-0">
-            <div class="container">
-                
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+        @include('layouts.partials.navtop')
 
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <!-- Left Side Of Navbar -->
-                    <ul class="navbar-nav mr-auto">
-                        
-                        
-                    </ul>
-
-                    <!-- Right Side Of Navbar -->
-                    <ul class="navbar-nav ml-auto">
-                        <li class="nav-item bg-white">
-                            <a class="nav-link active text-primary font-weight-bold" aria-current="page" href="#">DC</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-white" href="#">DCUNIVERSE</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-white" href="#">DCSHOP</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-white" href="#">DCCOMMUNITY</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-white" href="#">DC ON HBOMAX</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-
-        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
+        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm py-0">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
-                    {{ config('app.name', 'Laravel') }}
+                    DCLOGO
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
@@ -70,16 +39,33 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto">
-                        <li class="nav-item">
+                        <li class="nav-item {{Route::currentRouteName() === 'home' ? 'active' : ''}}">
                             <a class="nav-link active" aria-current="page" href="{{route('homepage')}}">Home</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{route('about')}}">About</a>
+                        <li class="nav-item ">
+                            <a class="nav-link" href="#">Character</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{route('contacts')}}">Contacts</a>
+                        <li class="nav-item ">
+                            <a class="nav-link" href="#">Comics</a>
                         </li>
-                        
+                        <li class="nav-item ">
+                            <a class="nav-link" href="#">Movies</a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link" href="#">TV</a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link" href="#">Games</a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link" href="#">Videos</a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link" href="#">News</a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link" href="#">Shop<i class="fas fa-sort-down fa-sm fa-fw align-text-top"></i></a>
+                        </li>
                     </ul>
 
                     <!-- Right Side Of Navbar -->
