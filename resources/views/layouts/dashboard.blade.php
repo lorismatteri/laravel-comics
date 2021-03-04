@@ -28,7 +28,7 @@
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
-                    {{ config('app.name', 'Laravel') }}
+                    DCLOGO
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
@@ -84,9 +84,10 @@
                         <li><a href="{{route('admin.comics.index')}}"><i class="fas fa-book-open fa-lg fa-fw"></i> Comics</a></li>
                     </ul>
                 </div>
-            <main class="col-xs-12 col-md-9 col-lg-10">
-                @yield('content')
-            </main>
+                <main class="col-xs-12 col-md-9 col-lg-10">
+                    @yield('content')
+                </main>
+            </div>
         </div>
     </div>
 </body>

@@ -16,7 +16,7 @@ class ComicController extends Controller
     public function index()
     {
         //
-        $comics = Comic::all();
+        $comics = Comic::latest()->get();
         return view('admin.comics.index', compact('comics'));
     }
 
@@ -28,6 +28,7 @@ class ComicController extends Controller
     public function create()
     {
         //
+        return view('admin.comics.create');
     }
 
     /**
@@ -39,6 +40,15 @@ class ComicController extends Controller
     public function store(Request $request)
     {
         //
+        $validatedData = $request->validate([
+            'name' => 'required',
+            'description' => 'required',
+        ]);
+
+        Comic::create($validatedData);
+
+        $new_comic = Comic::orderBy('id', 'desc')->first();
+        return redirect()->route('admin.comics.show', $new_comic);
     }
 
     /**
@@ -50,6 +60,8 @@ class ComicController extends Controller
     public function show(Comic $comic)
     {
         //
+        return view('admin.comics.show', compact('comic'));
+
     }
 
     /**
@@ -60,7 +72,7 @@ class ComicController extends Controller
      */
     public function edit(Comic $comic)
     {
-        //
+        return view('admin.comics.edit', compact('comic',));
     }
 
     /**
@@ -73,6 +85,13 @@ class ComicController extends Controller
     public function update(Request $request, Comic $comic)
     {
         //
+        $validatedData = $request->validate([
+            'name' => 'required',
+            'description' => 'required',
+        ]);
+
+        $comic->update($validatedData);
+        return redirect()->route('admin.comics.index', $comic); 
     }
 
     /**
@@ -84,5 +103,7 @@ class ComicController extends Controller
     public function destroy(Comic $comic)
     {
         //
+        $comic->delete();
+        return redirect()->route('admin.comics.index'); 
     }
 }

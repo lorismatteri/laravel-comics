@@ -17,16 +17,16 @@ class CreateComicsTable extends Migration
             $table->id();
             $table->string('name');
             $table->text('description');
-            $table->string('cover');
-            $table->float('price');
-            $table->boolean('available');
-            $table->string('designer');
-            $table->string('author');
-            $table->string('serie');
-            $table->integer('volume');
-            $table->string('size');
-            $table->integer('page_count');
-            $table->string('rating');
+            $table->string('cover')->nullable()->default('');
+            $table->float('price')->nullable()->default(0);
+            $table->boolean('available')->nullable()->default(0);
+            $table->string('designer')->nullable()->default('');
+            $table->string('author')->nullable()->default('');
+            $table->string('serie')->nullable()->default('');
+            $table->integer('volume')->nullable()->default(0);
+            $table->string('size')->nullable()->default('');
+            $table->integer('page_count')->nullable()->default(0);
+            $table->string('rating')->nullable()->default('');
             $table->timestamps();
         });
     }
