@@ -10948,6 +10948,14 @@ a.text-dark:focus {
   border-bottom: 0.5px solid lightgrey;
 }
 
+.navborder img {
+  width: 65%;
+}
+
+.navborder ul li a {
+  font-size: 1.25rem;
+}
+
 .active {
   border-bottom: 3px solid #3490dc;
 }
@@ -10961,12 +10969,6 @@ td > button {
   width: 100%;
 }
 
-/* .white_row {
-    height: 100px;
-    width: 100%;
-    background-color: white;
-} */
-
 .banner {
   position: relative;
   width: 100%;
@@ -10978,5 +10980,22 @@ td > button {
   left: 10%;
   top: -20px;
   background-color: #3490dc;
+}
+
+#serie {
+  position: relative;
+  background-color: #343a40;
+}
+
+#serie .serie_title {
+  position: absolute;
+  left: 10%;
+  top: -40px;
+  background-color: #3490dc;
+}
+
+#serie .card {
+  flex-basis: calc(16.66% - 2rem);
+  margin: 0 1rem;
 }
 

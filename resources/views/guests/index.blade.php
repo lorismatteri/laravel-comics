@@ -17,7 +17,7 @@
         @endforeach
     </div>
 
-    <section id="must_read py-5" class="container">
+    <section id="must_read" class="container pb-5">
         <h1 class="text-primary text-uppercase font-weight-bold mb-5">Must Reads</h1>
         <div class="d-flex">
             @foreach($articles as $article)
@@ -27,6 +27,26 @@
                     <h5 class="card-title font-weight-bold text-primary">{{$article->subtitle}}</h5>
                     <h4 class="card-title font-weight-bold">{{$article->title}}</h4>
                     <p class="card-text">{{$article->description}}</p>
+                </div>
+            </div>
+            @endforeach
+        </div>
+    </section>
+
+    <section id="serie" class="py-5">
+        <div class="container d-flex flex-wrap">
+            <div class="serie_title d-flex justify-content-center align-items-center ">
+                <h1 class="text-uppercase text-white font-weight-bold my-2 mx-5">Current series</h1>
+            </div>
+            @foreach($series as $serie)
+            <div class="card border-0 bg-transparent text-white">
+                @if($serie->cover)
+                <img src="{{asset('img/' . $serie->cover)}}" class="card-img-top" alt="...">
+                @else
+                <img src="{{asset('img/noimg.jpg')}}" class="card-img-top" alt="...">
+                @endif
+                <div class="card-body px-0">
+                    <h6 class="card-title font-weight-bold">{{$serie->name}}</h6>
                 </div>
             </div>
             @endforeach
