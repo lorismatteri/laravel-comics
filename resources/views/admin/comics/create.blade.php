@@ -1,7 +1,7 @@
 @extends('layouts.dashboard')
 
 @section('content')
-    <h1>Crea Comic</h1>
+    <h1>Inserisci Comic</h1>
         
     <!-- errori -->
     @if ($errors->any())
@@ -14,7 +14,7 @@
         </div>
     @endif
 
-    <form action="{{route('admin.comics.store')}}" method="post">
+    <form action="{{route('admin.comics.store')}}" method="post" enctype="multipart/form-data">
         @csrf
         <div class="form-group">
             <label for="name">Name</label>
@@ -31,6 +31,12 @@
         @error('description')
             <div class="alert alert-danger">{{ $message }}</div>
         @enderror
+
+        <div class="form-group">
+          <label for="cover">Cover</label>
+          <input type="file" class="form-control-file" name="cover" id="cover" placeholder="Add a cover image" aria-describedby="coverHelper">
+          <small id="coverHelper" class="form-text text-muted">Add a cover image for the current comic</small>
+        </div>
 
         <button type="submit" class="btn btn-primary">Submit</button>
     </form>

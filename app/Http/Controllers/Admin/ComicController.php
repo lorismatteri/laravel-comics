@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Comic;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class ComicController extends Controller
 {
@@ -43,8 +44,12 @@ class ComicController extends Controller
         $validatedData = $request->validate([
             'name' => 'required',
             'description' => 'required',
+            'cover' => 'nullable | mimes:jpeg,jpg,bmp,png, | max:500'
         ]);
+        
 
+        $cover = Storage::disk('public')->put('comic_img', $request->cover);
+        $validatedData['cover'] = $cover;
         Comic::create($validatedData);
 
         $new_comic = Comic::orderBy('id', 'desc')->first();
@@ -88,8 +93,12 @@ class ComicController extends Controller
         $validatedData = $request->validate([
             'name' => 'required',
             'description' => 'required',
+            'cover' => 'nullable | mimes:jpeg,jpg,bmp,png, | max:500'
         ]);
-
+        
+        $cover = Storage::disk('public')->put('comic_img', $request->cover);
+        $validatedData['cover'] = $cover;
+        
         $comic->update($validatedData);
         return redirect()->route('admin.comics.index', $comic); 
     }

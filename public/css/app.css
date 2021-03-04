@@ -10948,6 +10948,10 @@ a.text-dark:focus {
   border-bottom: 3px solid #3490dc;
 }
 
+td img {
+  width: 100%;
+}
+
 td > a,
 td > button {
   width: 100%;

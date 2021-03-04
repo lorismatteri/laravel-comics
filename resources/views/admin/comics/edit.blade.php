@@ -15,7 +15,7 @@
         </div>
     @endif
     
-    <form action="{{route('admin.comics.update', ['comic' => $comic->id])}}" method="post">
+    <form action="{{route('admin.comics.update', ['comic' => $comic->id])}}" method="post" enctype="multipart/form-data">
         @csrf
         @method('PUT')
         <div class="form-group">
@@ -33,6 +33,12 @@
         @error('description')
             <div class="alert alert-danger">{{ $message }}</div>
         @enderror
+
+        <div class="form-group">
+            <label for="cover">Cover</label>
+            <input type="file" class="form-control-file" name="cover" id="cover" placeholder="Add a cover image" aria-describedby="coverHelper">
+            <small id="coverHelper" class="form-text text-muted">Add a cover image for the current comic</small>
+          </div>
 
         <button type="submit" class="btn btn-primary">Submit</button>
     </form>

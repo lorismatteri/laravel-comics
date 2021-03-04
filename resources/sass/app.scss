@@ -11,6 +11,11 @@
     border-bottom: 3px solid $blue;
 }
 
-td > a, td > button {
-    width: 100%;
+td {
+    img {
+        width: 100%;
+    }
+    > a, > button {
+        width: 100%;
+    }
 }

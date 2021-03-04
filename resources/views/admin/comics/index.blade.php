@@ -2,12 +2,13 @@
 
 @section('content')
     <h1>All comics for admin</h1>
-    <a href="{{route('admin.comics.create')}}" class="btn bg-primary mb-2 float-right">Crea nuovo comic</a>
+    <a href="{{route('admin.comics.create')}}" class="btn bg-primary mb-2 float-right">Inserisci nuovo comic</a>
 
     <table class="table">
         <thead>
             <tr>
                 <th>Id</th>
+                <th>Cover</th>
                 <th>Name</th>
                 <th>Body</th>
                 <th>Created</th>
@@ -19,6 +20,7 @@
             @foreach ($comics as $comic) 
             <tr>
                 <td scope="row">{{$comic->id}}</td>
+                <td><img src="{{asset('storage/' . $comic->cover)}}" alt=""></td>
                 <td>{{$comic->name}}</td>
                 <td>{{$comic->description}}</td>
                 <td>{{$comic->created_at}}</td>
