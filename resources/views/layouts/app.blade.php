@@ -23,11 +23,11 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
 </head>
 <body>
-    <div id="app">
+    <div id="app" class="bg-white">
         
         @include('layouts.partials.navtop')
 
-        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm py-0">
+        <nav class="navbar navbar-expand-md navbar-light bg-white py-0 navborder">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
                     DCLOGO
@@ -107,14 +107,10 @@
             </div>
         </nav>
 
-        <main class="py-4">
-            <div class="container">
-                <div class="row">
-                    <div class="col-12">
-                        @yield('content')                        
-                    </div>                   
-                </div>
-            </div>
+        <main >
+            
+            @yield('content')                        
+                    
         </main>
     </div>
 </body>

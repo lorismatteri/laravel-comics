@@ -10944,6 +10944,10 @@ a.text-dark:focus {
   }
 }
 
+.navborder {
+  border-bottom: 0.5px solid lightgrey;
+}
+
 .active {
   border-bottom: 3px solid #3490dc;
 }
@@ -10955,5 +10959,24 @@ td img {
 td > a,
 td > button {
   width: 100%;
+}
+
+/* .white_row {
+    height: 100px;
+    width: 100%;
+    background-color: white;
+} */
+
+.banner {
+  position: relative;
+  width: 100%;
+  background-color: #343a40;
+}
+
+.banner .banner_title {
+  position: absolute;
+  left: 10%;
+  top: -20px;
+  background-color: #3490dc;
 }
 

@@ -7,6 +7,10 @@
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
 
+.navborder {
+    border-bottom: .5px solid lightgrey;
+}
+
 .active {
     border-bottom: 3px solid $blue;
 }
@@ -17,5 +21,23 @@ td {
     }
     > a, > button {
         width: 100%;
+    }
+}
+
+/* .white_row {
+    height: 100px;
+    width: 100%;
+    background-color: white;
+} */
+
+.banner {
+    position: relative;
+    width: 100%;
+    background-color: $dark;
+    .banner_title {
+        position: absolute;
+        left: 10%;
+        top: -20px;
+        background-color: $blue;
     }
 }
