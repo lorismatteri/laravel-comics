@@ -7,6 +7,12 @@
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
 
+@import 'comic';
+
+.h_50 {
+    height: 50vh
+}
+
 .navborder {
     border-bottom: .5px solid lightgrey;
     img {

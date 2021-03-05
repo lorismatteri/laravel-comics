@@ -10944,6 +10944,38 @@ a.text-dark:focus {
   }
 }
 
+#comic_head {
+  position: relative;
+  height: 500px;
+  margin-bottom: 50px;
+  background-image: linear-gradient(to bottom, #343a40 0px, #343a40 75%, #3490dc 15%, #3490dc 100%);
+}
+
+#comic_head .cover {
+  position: absolute;
+  left: 25%;
+  top: 25%;
+  border: 1px solid white;
+}
+
+#comic_head .cover span {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+#comic_head .cover img {
+  height: 300px;
+}
+
+#comic_head .cover div {
+  background-color: #00A9D9;
+}
+
+.h_50 {
+  height: 50vh;
+}
+
 .navborder {
   border-bottom: 0.5px solid lightgrey;
 }

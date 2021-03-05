@@ -42,8 +42,8 @@
                         <li class="nav-item ">
                             <a class="nav-link text-uppercase font-weight-bold" href="">Character</a>
                         </li>
-                        <li class="nav-item {{Route::currentRouteName() === 'homepage' ? 'active' : ''}}">
-                            <a class="nav-link text-uppercase font-weight-bold" href="{{route('homepage')}}">Comics</a>
+                        <li class="nav-item {{Route::currentRouteName() === 'comics' ? 'active' : ''}}">
+                            <a class="nav-link text-uppercase font-weight-bold" href="{{route('comics')}}">Comics</a>
                         </li>
                         <li class="nav-item ">
                             <a class="nav-link text-uppercase font-weight-bold" href="#">Movies</a>

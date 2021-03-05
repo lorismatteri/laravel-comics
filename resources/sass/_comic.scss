@@ -1,0 +1,23 @@
+#comic_head {
+    position: relative;
+    height: 500px;
+    margin-bottom: 50px;
+    background-image: linear-gradient(to bottom, $dark 0px, $dark 75%, $blue 15%, $blue 100%);
+    .cover {
+        position: absolute;
+        left: 25%;
+        top: 25%;
+        border: 1px solid white;
+        span {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        img {
+            height: 300px;
+        }
+        div {
+            background-color: #00A9D9;
+        }
+    }
+}

@@ -11,11 +11,21 @@ class PageController extends Controller
 {
     public function index() 
     {
+        return view('guests.home');
+    }
+
+    public function comics()
+    {
         $comics = Comic::all();
         $articles = Article::all();
         $series = Serie::all();
 
-        return view('guests.index', compact('comics', 'articles', 'series'));
+        return view('guests.comics.index', compact('comics', 'articles', 'series'));
     }
-
+    
+    public function show(Comic $comic)
+    {
+        
+        return view('guests.comics.show', compact('comic'));
+    }
 }
