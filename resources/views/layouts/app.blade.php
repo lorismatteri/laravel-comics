@@ -39,32 +39,29 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto">
-                        <li class="nav-item {{Route::currentRouteName() === 'home' ? 'active' : ''}}">
-                            <a class="nav-link active" aria-current="page" href="{{route('homepage')}}">Home</a>
+                        <li class="nav-item ">
+                            <a class="nav-link text-uppercase font-weight-bold" href="">Character</a>
+                        </li>
+                        <li class="nav-item {{Route::currentRouteName() === 'homepage' ? 'active' : ''}}">
+                            <a class="nav-link text-uppercase font-weight-bold" href="{{route('homepage')}}">Comics</a>
                         </li>
                         <li class="nav-item ">
-                            <a class="nav-link" href="#">Character</a>
+                            <a class="nav-link text-uppercase font-weight-bold" href="#">Movies</a>
                         </li>
                         <li class="nav-item ">
-                            <a class="nav-link" href="#">Comics</a>
+                            <a class="nav-link text-uppercase font-weight-bold" href="#">TV</a>
                         </li>
                         <li class="nav-item ">
-                            <a class="nav-link" href="#">Movies</a>
+                            <a class="nav-link text-uppercase font-weight-bold" href="#">Games</a>
                         </li>
                         <li class="nav-item ">
-                            <a class="nav-link" href="#">TV</a>
+                            <a class="nav-link text-uppercase font-weight-bold" href="#">Videos</a>
                         </li>
                         <li class="nav-item ">
-                            <a class="nav-link" href="#">Games</a>
+                            <a class="nav-link text-uppercase font-weight-bold" href="#">News</a>
                         </li>
                         <li class="nav-item ">
-                            <a class="nav-link" href="#">Videos</a>
-                        </li>
-                        <li class="nav-item ">
-                            <a class="nav-link" href="#">News</a>
-                        </li>
-                        <li class="nav-item ">
-                            <a class="nav-link" href="#">Shop<i class="fas fa-sort-down fa-sm fa-fw align-text-top"></i></a>
+                            <a class="nav-link text-uppercase font-weight-bold" href="#">Shop<i class="fas fa-sort-down fa-sm fa-fw align-text-top"></i></a>
                         </li>
                     </ul>
 
@@ -112,6 +109,8 @@
             @yield('content')                        
                     
         </main>
+
+        @include('layouts.partials.footer')
     </div>
 </body>
 </html>

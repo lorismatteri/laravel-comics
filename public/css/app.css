@@ -10954,10 +10954,11 @@ a.text-dark:focus {
 
 .navborder ul li a {
   font-size: 1.25rem;
+  padding: 1.5rem 1rem;
 }
 
 .active {
-  border-bottom: 3px solid #3490dc;
+  border-bottom: 5px solid #3490dc;
 }
 
 td img {
@@ -10978,7 +10979,7 @@ td > button {
 .banner .banner_title {
   position: absolute;
   left: 10%;
-  top: -20px;
+  top: -25px;
   background-color: #3490dc;
 }
 
@@ -10997,5 +10998,47 @@ td > button {
 #serie .card {
   flex-basis: calc(16.66% - 2rem);
   margin: 0 1rem;
+}
+
+#blue_section {
+  padding: 3rem;
+}
+
+#blue_section .blue_card {
+  flex-basis: 25%;
+}
+
+#site_footer {
+  background-image: url(/images/footer-bg.jpg?5a7d2a2832d619d7bf7d8fdde1aa1e5c);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#site_footer .footer_top {
+  padding: 3rem 0;
+  background-image: url(/images/logo-background.png?f4404ce9dc132a08a47f19e3f73f1417);
+  background-position: right center;
+  background-repeat: no-repeat;
+}
+
+#site_footer .footer_top .footer_card {
+  width: 15%;
+}
+
+#site_footer .footer_top .footer_card li {
+  color: grey;
+  font-weight: bold;
+}
+
+#site_footer .footer_top p {
+  color: grey;
+  font-weight: bold;
+  font-size: 0.8rem;
+}
+
+#site_footer .footer_bottom button {
+  border-radius: 0;
+  border: 3px solid #3490dc;
+  font-size: 1.25rem;
 }
 

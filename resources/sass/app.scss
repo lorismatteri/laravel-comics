@@ -14,11 +14,12 @@
     }
     ul li a {
         font-size: 1.25rem;
+        padding: 1.5rem 1rem;
     }
 }
 
 .active {
-    border-bottom: 3px solid $blue;
+    border-bottom: 5px solid $blue;
 }
 
 td {
@@ -37,7 +38,7 @@ td {
     .banner_title {
         position: absolute;
         left: 10%;
-        top: -20px;
+        top: -25px;
         background-color: $blue;
     }
 }
@@ -54,5 +55,43 @@ td {
     .card {
         flex-basis: calc(16.66% - 2rem);
         margin: 0 1rem;
+    }
+}
+
+#blue_section {
+    padding: 3rem;
+    .blue_card {
+        flex-basis: 25%;
+    }
+}
+
+#site_footer {
+    background-image: url('../../public/img/footer-bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    .footer_top {
+        padding: 3rem 0;
+        background-image: url('../../public/img/logo-background.png');
+        background-position: right center;
+        background-repeat: no-repeat;
+        .footer_card {
+            width: 15%;
+            li {
+                color: grey;
+                font-weight: bold;
+            }
+        }
+        p {
+            color: grey;
+            font-weight: bold;
+            font-size: .8rem;
+        }
+    }
+    .footer_bottom {
+        button {
+            border-radius: 0;
+            border: 3px solid $blue;
+            font-size: 1.25rem;
+        }
     }
 }
