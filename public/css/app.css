@@ -11042,3 +11042,19 @@ td > button {
   font-size: 1.25rem;
 }
 
+#site_footer .footer_bottom .socials span {
+  font-size: 1.25rem;
+}
+
+#site_footer .footer_bottom .socials i {
+  color: grey;
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 0 0.5rem;
+  vertical-align: middle;
+}
+
+#site_footer .footer_bottom .socials i:hover {
+  transform: scale(1.5);
+}
+

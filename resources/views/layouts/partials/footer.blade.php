@@ -65,9 +65,18 @@
             <p class="text-primary">Cookie Settings</p>
         </div>
         <div class="footer_bottom bg-dark py-4">
-            <div class="container d-flex justify-content-between">
+            <div class="container d-flex justify-content-between align-items-center">
                 <button type="button" class="btn btn-outline-primary text-uppercase text-white font-weight-bold">Sign up now!</button>
-
+                <div class="socials d-flex justify-content-end align-items-center">
+                    <span class="text-primary text-uppercase font-weight-bold pr-3">Follow us</span>
+                    <ul class="list-inline m-0">
+                        <li class="list-inline-item"><i class="fab fa-facebook"></i></li>
+                        <li class="list-inline-item"><i class="fab fa-twitter"></i></li>
+                        <li class="list-inline-item"><i class="fab fa-youtube"></i></li>
+                        <li class="list-inline-item"><i class="fab fa-pinterest"></i></li>
+                        <li class="list-inline-item"><i class="fab fa-periscope"></i></li>
+                    </ul>
+                </div>
             </div>
         </div>
     </section>
